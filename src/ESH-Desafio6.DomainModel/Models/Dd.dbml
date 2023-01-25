@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desafio6db" Class="DdDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GitErick\desafio6\src\ESH-Desafio6.AppWeb\App_Data\Desafio6db.mdf;Integrated Security=True" SettingsObjectName="ESH_Desafio6.DomainModel.Properties.Settings" SettingsPropertyName="Desafio6dbConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Alunos" Member="Aluno">
+    <Type Name="Aluno">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NomeCompleto" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DataNascimento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="RA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TurmaId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ESH_Desafio6.ApplicationService.Views.AlunoView>
+
+<p>
+    @Html.ActionLink("Create New", "Edit")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TurmaId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataNascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeCompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TurmaId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |            
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
